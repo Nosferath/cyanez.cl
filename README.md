@@ -1,3 +1,8 @@
+# cyanez.cl
+Repositorio para mi sitio web público. Aún no me manejo bien con Next.js, así que voy a dejar el README default abajo por ahora.
+
+---
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
