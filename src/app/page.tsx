@@ -80,7 +80,7 @@ export default function Home() {
         </main> */}
 
         <Footer>
-          <Text>© {new Date().getFullYear()} — Construido con React y Tailwind</Text>
+          <Text>© 2025 Claudio Yáñez -- Construido con React y Tailwind</Text>
         </Footer>
       </ContentWrapper>
     </PageContainer>
