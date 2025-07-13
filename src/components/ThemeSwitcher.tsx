@@ -13,13 +13,13 @@ export function ThemeToggleButton({ className = '' }: { className?: string }) {
         return '☀️';
       case 'dark':
       case 'black':
-        return '🌙';
+        return '💀';
       case 'blue':
-        return '🔵';
+        return '️💧';
       case 'green':
-        return '🟢';
+        return '🌳';
       case 'red':
-        return '🔴';
+        return '🔥';
       default:
         return '🎨';
     }
