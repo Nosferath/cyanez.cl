@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { ReactNode } from 'react';
 
 interface CardProps {
@@ -93,6 +94,30 @@ export function Heading({ children, level = 1, className = '' }: HeadingProps) {
   );
 }
 
+interface HeaderProps {
+  title: string;
+  subtitle?: string;
+  link?: string;
+  className?: string;
+}
+
+export function Header({ title, subtitle, link = '', className = '' }: HeaderProps) {
+  return (
+    <header className={`site-header ${className}`}>
+      <Heading level={1}>
+        {link ? (
+          <Link href={link}>
+            {title}
+          </Link>
+        ) : (
+          title
+        )}
+      </Heading>
+      {subtitle && <p className="subtitle">{subtitle}</p>}
+    </header>
+  );
+}
+
 interface TextProps {
   children: ReactNode;
   size?: 'base' | 'large';
@@ -127,21 +152,6 @@ export function ContentWrapper({ children, className = '' }: ContainerProps) {
     <div className={`content-wrapper ${className}`}>
       {children}
     </div>
-  );
-}
-
-interface HeaderProps {
-  title: string;
-  subtitle?: string;
-  className?: string;
-}
-
-export function Header({ title, subtitle, className = '' }: HeaderProps) {
-  return (
-    <header className={`site-header ${className}`}>
-      <Heading level={1}>{title}</Heading>
-      {subtitle && <p className="subtitle">{subtitle}</p>}
-    </header>
   );
 }
 

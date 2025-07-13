@@ -20,6 +20,7 @@ export default function Home() {
         <Header 
           title="CLAUDIO_YÁÑEZ_MENDOZA"
           subtitle="desarrollador full-stack / magíster en ciencias de la ingeniería, mención eléctrica"
+          link="/"
         />
 
         <div className="section-content" style={{ textAlign: 'right', padding: '1rem' }}>
