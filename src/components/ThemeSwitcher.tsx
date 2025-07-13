@@ -11,7 +11,6 @@ export function ThemeToggleButton({ className = '' }: { className?: string }) {
       case 'default':
       case 'white':
         return '☀️';
-      case 'dark':
       case 'black':
         return '💀';
       case 'blue':

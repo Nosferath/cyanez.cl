@@ -23,28 +23,28 @@ export function ThemeProvider({ children, initialTheme = 'white' }: ThemeProvide
 
   const applyTheme = (theme: Theme) => {
     if (typeof document === 'undefined') return;
-    
+
     const root = document.documentElement;
-    
+
     root.style.setProperty('--color-primary', theme.colors.primary);
     root.style.setProperty('--color-bg-main', theme.colors.bgMain);
     root.style.setProperty('--color-bg-card', theme.colors.bgCard);
     root.style.setProperty('--color-bg-accent', theme.colors.bgAccent);
     root.style.setProperty('--color-bg-hover', theme.colors.bgHover);
-    
+
     root.style.setProperty('--border-width', theme.borders.width);
     root.style.setProperty('--border-width-thin', theme.borders.widthThin);
     root.style.setProperty('--border-color', theme.borders.color);
-    
+
     root.style.setProperty('--shadow-brutalist', theme.shadows.brutalist);
     root.style.setProperty('--shadow-small', theme.shadows.small);
-    
+
     root.style.setProperty('--space-xs', theme.spacing.xs);
     root.style.setProperty('--space-sm', theme.spacing.sm);
     root.style.setProperty('--space-md', theme.spacing.md);
     root.style.setProperty('--space-lg', theme.spacing.lg);
     root.style.setProperty('--space-xl', theme.spacing.xl);
-    
+
     root.style.setProperty('--font-mono', theme.typography.fontMono);
     root.style.setProperty('--font-size-xl', theme.typography.fontSize.xl);
     root.style.setProperty('--font-size-lg', theme.typography.fontSize.lg);
@@ -57,23 +57,16 @@ export function ThemeProvider({ children, initialTheme = 'white' }: ThemeProvide
     setThemeName(newThemeName);
     setCurrentTheme(newTheme);
     applyTheme(newTheme);
-    
+
     if (typeof window !== 'undefined') {
-      localStorage.setItem('theme', newThemeName);
+      document.cookie = `theme=${newThemeName}; path=/; max-age=31536000`;
     }
   };
 
   // Setear tema ya guardado al entrar a la página
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const savedTheme = localStorage.getItem('theme') as ThemeName | null;
-      if (savedTheme && themes[savedTheme]) {
-        setTheme(savedTheme);
-      } else {
-        applyTheme(currentTheme);
-      }
-    }
-  });
+    applyTheme(themes[initialTheme]);
+  }, [initialTheme]);
 
   const value: ThemeContextType = {
     currentTheme,
@@ -99,7 +92,7 @@ export function useTheme() {
 
 export function useThemeToggle() {
   const { setTheme, themeName } = useTheme();
-  
+
   const toggleTheme = () => {
     const themeOrder: ThemeName[] = ['white', 'blue', 'black', 'red', 'green'];
     const currentIndex = themeOrder.indexOf(themeName);
