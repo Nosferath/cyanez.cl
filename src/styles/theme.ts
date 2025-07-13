@@ -126,38 +126,33 @@ export const greenTheme: Theme = {
   },
 };
 
-// Helper function to get theme CSS variables as a string
-export function getThemeCSS(theme: Theme): string {
-  return `
-    --color-primary: ${theme.colors.primary};
-    --color-bg-main: ${theme.colors.bgMain};
-    --color-bg-card: ${theme.colors.bgCard};
-    --color-bg-accent: ${theme.colors.bgAccent};
-    --color-bg-hover: ${theme.colors.bgHover};
-    --border-width: ${theme.borders.width};
-    --border-width-thin: ${theme.borders.widthThin};
-    --border-color: ${theme.borders.color};
-    --shadow-brutalist: ${theme.shadows.brutalist};
-    --shadow-small: ${theme.shadows.small};
-    --space-xs: ${theme.spacing.xs};
-    --space-sm: ${theme.spacing.sm};
-    --space-md: ${theme.spacing.md};
-    --space-lg: ${theme.spacing.lg};
-    --space-xl: ${theme.spacing.xl};
-    --font-mono: ${theme.typography.fontMono};
-    --font-size-xl: ${theme.typography.fontSize.xl};
-    --font-size-lg: ${theme.typography.fontSize.lg};
-    --font-size-md: ${theme.typography.fontSize.md};
-    --font-size-base: ${theme.typography.fontSize.base};
-  `;
-}
+export const redTheme: Theme = {
+  ...defaultTheme,
+  colors: {
+    primary: '#991b1b', // red-800
+    bgMain: '#fef2f2', // red-50
+    bgCard: '#ffffff',
+    bgAccent: '#fecaca', // red-100
+    bgHover: '#fca5a5', // red-200
+  },
+  borders: {
+    ...defaultTheme.borders,
+    color: '#991b1b',
+  },
+  shadows: {
+    brutalist: '8px 8px 0 0 rgba(153, 27, 27, 1)',
+    small: '4px 4px 0 0 rgba(153, 27, 27, 1)',
+  },
+};
 
-// Theme context for React
 export const themes = {
   default: defaultTheme,
+  white: defaultTheme,
   dark: darkTheme,
+  black: darkTheme,
   blue: blueTheme,
   green: greenTheme,
+  red: redTheme,
 } as const;
 
 export type ThemeName = keyof typeof themes;

@@ -4,6 +4,7 @@ import {
   Header, 
   Footer, 
   Section,
+  Quote,
   // Card, 
   // CardGrid, 
   // Button, 
@@ -17,7 +18,7 @@ export default function Home() {
     <PageContainer>
       <ContentWrapper>
         <Header 
-          title="CLAUDIO_YÁÑEZ"
+          title="CLAUDIO_YÁÑEZ_MENDOZA"
           subtitle="desarrollador full-stack / magíster en ciencias de la ingeniería, mención eléctrica"
         />
 
@@ -27,7 +28,9 @@ export default function Home() {
         
         <main className='section-content'>
           <Section title="🚧 Página en construcción 🚧">
-            {null} {/*para que no moleste con que no tiene children*/}
+            <Quote author="Tim Urban">
+              A remarkable, glorious achievement is just what a long series of unremarkable, unglorious tasks looks like from far away.
+            </Quote>
           </Section>
         </main>
 

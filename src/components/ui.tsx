@@ -1,6 +1,5 @@
 import { ReactNode } from 'react';
 
-// Card Component
 interface CardProps {
   children: ReactNode;
   className?: string;
@@ -14,7 +13,6 @@ export function Card({ children, className = '' }: CardProps) {
   );
 }
 
-// Button Component
 interface ButtonProps {
   children: ReactNode;
   href?: string;
@@ -60,7 +58,6 @@ export function Button({
   );
 }
 
-// Section Component
 interface SectionProps {
   children: ReactNode;
   title?: string;
@@ -76,7 +73,6 @@ export function Section({ children, title, className = '' }: SectionProps) {
   );
 }
 
-// Typography Components
 interface HeadingProps {
   children: ReactNode;
   level?: 1 | 2 | 3;
@@ -113,7 +109,6 @@ export function Text({ children, size = 'base', className = '' }: TextProps) {
   );
 }
 
-// Container Components
 interface ContainerProps {
   children: ReactNode;
   className?: string;
@@ -135,7 +130,6 @@ export function ContentWrapper({ children, className = '' }: ContainerProps) {
   );
 }
 
-// Header Component
 interface HeaderProps {
   title: string;
   subtitle?: string;
@@ -151,7 +145,6 @@ export function Header({ title, subtitle, className = '' }: HeaderProps) {
   );
 }
 
-// Footer Component
 interface FooterProps {
   children: ReactNode;
   className?: string;
@@ -165,7 +158,6 @@ export function Footer({ children, className = '' }: FooterProps) {
   );
 }
 
-// Button Group Component
 interface ButtonGroupProps {
   children: ReactNode;
   className?: string;
@@ -179,7 +171,6 @@ export function ButtonGroup({ children, className = '' }: ButtonGroupProps) {
   );
 }
 
-// Card Grid Component
 interface CardGridProps {
   children: ReactNode;
   className?: string;
@@ -191,4 +182,25 @@ export function CardGrid({ children, className = '' }: CardGridProps) {
       {children}
     </div>
   );
+}
+
+interface QuoteProps {
+  children: ReactNode;
+  author?: string;
+  className?: string;
+}
+
+export function Quote({ children, author, className = '' }: QuoteProps) {
+  return (
+    <blockquote className={`quote ${className}`}>
+      <Text className="quote-text">
+        <i>{children}</i>
+      </Text>
+      {author && (
+        <Text className="quote-attribution">
+          -- { author }
+        </Text>
+      )}
+    </blockquote>
+  )
 }
