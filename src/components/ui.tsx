@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ReactNode } from 'react';
+import { ReactNode, ReactElement } from 'react';
 
 interface CardProps {
   children: ReactNode;
@@ -95,7 +95,7 @@ export function Heading({ children, level = 1, className = '' }: HeadingProps) {
 }
 
 interface HeaderProps {
-  title: string;
+  title: string | ReactElement;
   subtitle?: string;
   link?: string;
   className?: string;

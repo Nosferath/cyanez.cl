@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { 
   PageContainer, 
   ContentWrapper, 
@@ -12,14 +13,13 @@ import {
   Text 
 } from '@/components/ui';
 import { ThemeToggleButton } from '@/components/ThemeSwitcher';
-import Link from 'next/link';
 
 export default function Home() {
   return (
     <PageContainer>
       <ContentWrapper>
         <Header 
-          title="CLAUDIO_YÁÑEZ_MENDOZA"
+          title={<>CLAUDIO_YÁÑEZ<wbr />_MENDOZA</>}
           subtitle="desarrollador full-stack / magíster en ciencias de la ingeniería, mención eléctrica"
           link="/"
         />
