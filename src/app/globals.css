@@ -33,6 +33,7 @@ body {
   background-color: var(--color-bg-main);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  word-wrap: break-word;
 }
 
 .page-container {
