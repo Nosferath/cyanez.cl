@@ -26,7 +26,6 @@ export default async function RootLayout({
       <head>
         <link rel="icon" href="favicon.svg" type="image/svg+xml"></link>
         <style dangerouslySetInnerHTML={{ __html: themeCSS }} />
-        {/* <script dangerouslySetInnerHTML={{ __html: createThemeScript() }} /> */}
       </head>
       <body>
         <ThemeProvider initialTheme={initialTheme}>

@@ -1,4 +1,4 @@
-import { Theme, themes } from "@/styles/theme";
+import { Theme } from "@/styles/theme";
 
 /*
  * Genera CSS para cargarlo al inicio y evitar flicker en el tema
@@ -31,31 +31,5 @@ export function generateThemeCSS(theme: Theme): string {
       --font-size-md: ${theme.typography.fontSize.md};
       --font-size-base: ${theme.typography.fontSize.base};
     }
-  `;
-}
-
-export function createThemeScript(): string {
-  const themesObject = JSON.stringify(themes);
-  
-  return `
-    (function() {
-      const themes = ${themesObject};
-      
-      function getCookie(name) {
-        const value = "; " + document.cookie;
-        const parts = value.split("; " + name + "=");
-        if (parts.length === 2) return parts.pop().split(";").shift();
-        return null;
-      }
-      
-      const savedTheme = getCookie('theme') || 'white';
-      const theme = themes[savedTheme] || themes.white;
-      
-      ${generateThemeCSS.toString()}
-      
-      const style = document.createElement('style');
-      style.textContent = generateThemeCSS(theme);
-      document.head.appendChild(style);
-    })();
   `;
 }
