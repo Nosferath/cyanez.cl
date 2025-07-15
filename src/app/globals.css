@@ -54,6 +54,7 @@ body {
   border: var(--border-width-thin) solid var(--border-color);
   background-color: var(--color-bg-accent);
   margin-bottom: var(--space-md);
+  box-shadow: var(--shadow-small);
 }
 
 .card:last-child {
@@ -218,7 +219,7 @@ body {
 
 .quote {
   padding: var(--space-md);
-  border: var(--border-width) solid var(--border-color);
+  border: var(--border-width-thin) solid var(--border-color);
   background-color: var(--color-bg-accent);
   box-shadow: var(--shadow-small);
   margin: var(--space-lg) 0;
