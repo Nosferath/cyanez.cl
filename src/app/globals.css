@@ -55,6 +55,7 @@ body {
   background-color: var(--color-bg-accent);
   margin-bottom: var(--space-md);
   box-shadow: var(--shadow-small);
+  border-radius: var(--space-xs);
 }
 
 .card:last-child {
@@ -78,6 +79,7 @@ body {
   font-weight: normal;
   transition: background-color 0.2s ease;
   cursor: pointer;
+  border-radius: var(--space-xs);
 }
 
 .btn:hover {
@@ -224,6 +226,7 @@ body {
   box-shadow: var(--shadow-small);
   margin: var(--space-lg) 0;
   position: relative;
+  border-radius: var(--space-xs);
 }
 
 .quote-text {
