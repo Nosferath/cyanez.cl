@@ -20,7 +20,7 @@ export default function Home() {
       <ContentWrapper>
         <Header
           title={<>CLAUDIO_YÁÑEZ<wbr />_MENDOZA</>}
-          subtitle="desarrollador full-stack / magíster en ciencias de la ingeniería, mención&nbsp;eléctrica"
+          subtitle="Desarrollador full-stack / magíster en ciencias de la ingeniería, mención&nbsp;eléctrica."
           link="/"
         />
 
