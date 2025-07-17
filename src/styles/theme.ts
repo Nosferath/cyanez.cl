@@ -33,13 +33,30 @@ export interface Theme {
   };
 }
 
+const amber = {
+  50: '#fffbeb',
+  100: '#fef3c7',
+  200: '#fde68a',
+  300: '#fcd34d',
+  400: '#fbbf24',
+  500: '#f59e0b',
+  600: '#d97706',
+  700: '#b45309',
+  800: '#92400e',
+  900: '#78350f',
+  950: '#451a03',
+}
+
 export const defaultTheme: Theme = {
   colors: {
     primary: '#000000',
     bgMain: '#fffbeb', // amber-50
-    bgCard: '#ffffff',
-    bgAccent: '#fef3c7', // amber-100
-    bgHover: '#fef3c7',
+    // bgCard: '#ffffff',
+    bgCard: amber[100],
+    // bgAccent: '#fef3c7', // amber-100
+    bgAccent: amber[300],
+    // bgHover: '#fef3c7',
+    bgHover: amber[400],
   },
   borders: {
     width: '4px',
@@ -88,60 +105,120 @@ export const darkTheme: Theme = {
   },
 };
 
+const blue = {
+  50: '#eff6ff',
+  100: '#dbeafe',
+  200: '#bfdbfe',
+  300: '#93c5fd',
+  400: '#60a5fa',
+  500: '#3b82f6',
+  600: '#2563eb',
+  700: '#1d4ed8',
+  800: '#1e40af',
+  900: '#1e3a8a',
+  950: '#172554',
+};
+
 export const blueTheme: Theme = {
   ...defaultTheme,
   colors: {
-    primary: '#1e40af', // blue-800
+    // primary: '#1e40af', // blue-800
+    primary: '#000000',
     bgMain: '#eff6ff', // blue-50
-    bgCard: '#ffffff',
-    bgAccent: '#dbeafe', // blue-100
-    bgHover: '#bfdbfe', // blue-200
+    // bgCard: '#ffffff',
+    bgCard: blue[100],
+    // bgAccent: '#dbeafe', // blue-100
+    bgAccent: blue[300],
+    // bgHover: '#bfdbfe', // blue-200
+    bgHover: blue[400],
   },
   borders: {
     ...defaultTheme.borders,
-    color: '#1e40af',
+    // color: '#1e40af',
   },
   shadows: {
-    brutalist: '8px 8px 0 0 rgba(30, 64, 175, 1)',
-    small: '4px 4px 0 0 rgba(30, 64, 175, 1)',
+    // brutalist: '8px 8px 0 0 rgba(30, 64, 175, 1)',
+    // small: '4px 4px 0 0 rgba(30, 64, 175, 1)',
+    brutalist: '8px 8px 0 0 rgba(0, 0, 0, 1)',
+    small: '4px 4px 0 0 rgba(0, 0, 0, 1)',
   },
+};
+
+const green = {
+  50: '#f0fdf4',
+  100: '#dcfce7',
+  200: '#bbf7d0',
+  300: '#86efac',
+  400: '#4ade80',
+  500: '#22c55e',
+  600: '#16a34a',
+  700: '#15803d',
+  800: '#166534',
+  900: '#14532d',
+  950: '#052e16',
 };
 
 export const greenTheme: Theme = {
   ...defaultTheme,
   colors: {
-    primary: '#166534', // green-800
+    // primary: '#166534', // green-800
+    primary: '#000000',
     bgMain: '#f0fdf4', // green-50
-    bgCard: '#ffffff',
-    bgAccent: '#dcfce7', // green-100
-    bgHover: '#bbf7d0', // green-200
+    // bgCard: '#ffffff',
+    bgCard: green[100],
+    // bgAccent: '#dcfce7', // green-100
+    bgAccent: green[300],
+    // bgHover: '#bbf7d0', // green-200
+    bgHover: green[400],
   },
   borders: {
     ...defaultTheme.borders,
-    color: '#166534',
+    // color: '#166534',
   },
   shadows: {
-    brutalist: '8px 8px 0 0 rgba(22, 101, 52, 1)',
-    small: '4px 4px 0 0 rgba(22, 101, 52, 1)',
+    // brutalist: '8px 8px 0 0 rgba(22, 101, 52, 1)',
+    // small: '4px 4px 0 0 rgba(22, 101, 52, 1)',
+    brutalist: '8px 8px 0 0 rgba(0, 0, 0, 1)',
+    small: '4px 4px 0 0 rgba(0, 0, 0, 1)',
   },
+};
+
+const red = {
+  50: '#fef2f2',
+  100: '#fee2e2',
+  200: '#fecaca',
+  300: '#fca5a5',
+  400: '#f87171',
+  500: '#ef4444',
+  600: '#dc2626',
+  700: '#b91c1c',
+  800: '#991b1b',
+  900: '#7f1d1d',
+  950: '#450a0a',
 };
 
 export const redTheme: Theme = {
   ...defaultTheme,
   colors: {
-    primary: '#991b1b', // red-800
+    // primary: '#991b1b', // red-800
+    primary: '#000000',
     bgMain: '#fef2f2', // red-50
-    bgCard: '#ffffff',
-    bgAccent: '#fecaca', // red-100
-    bgHover: '#fca5a5', // red-200
+    // bgCard: '#ffffff',
+    bgCard: red[100],
+    // bgAccent: '#fecaca', // red-100
+    bgAccent: red[300],
+    // bgHover: '#fca5a5', // red-200
+    bgHover: red[400],
   },
   borders: {
     ...defaultTheme.borders,
-    color: '#991b1b',
+    // color: '#991b1b',
   },
   shadows: {
-    brutalist: '8px 8px 0 0 rgba(153, 27, 27, 1)',
-    small: '4px 4px 0 0 rgba(153, 27, 27, 1)',
+    // brutalist: '8px 8px 0 0 rgba(153, 27, 27, 1)',
+    // small: '4px 4px 0 0 rgba(153, 27, 27, 1)',
+    brutalist: '8px 8px 0 0 rgba(0, 0, 0, 1)',
+    small: '4px 4px 0 0 rgba(0, 0, 0, 1)',
   },
 };
 

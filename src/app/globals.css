@@ -5,11 +5,12 @@
   --color-bg-main: #fffbeb; /* amber-50 */
   --color-bg-card: #ffffff;
   --color-bg-accent: #fef3c7; /* amber-100 */
-  --color-bg-hover: #fef3c7;
+  /* --color-bg-hover: #fef3c7; */
+  --color-bg-hover: #fffbeb;
   
   --border-width: 4px;
   --border-width-thin: 2px;
-  --border-color: var(--color-primary);
+  --border-color: #000000;
   
   --shadow-brutalist: 8px 8px 0 0 rgba(0, 0, 0, 1);
   --shadow-small: 4px 4px 0 0 rgba(0, 0, 0, 1);
@@ -72,7 +73,7 @@ body {
   display: inline-block;
   padding: var(--space-xs) var(--space-md);
   border: var(--border-width-thin) solid var(--border-color);
-  background-color: var(--color-bg-card);
+  background-color: var(--color-bg-accent);
   color: var(--color-primary);
   text-decoration: none;
   font-family: var(--font-mono);
