@@ -1,16 +1,16 @@
 import Link from 'next/link';
-import { 
-  PageContainer, 
-  ContentWrapper, 
-  Header, 
-  Footer, 
+import {
+  PageContainer,
+  ContentWrapper,
+  Header,
+  Footer,
   Section,
   Quote,
-  Card, 
-  CardGrid, 
-  Button, 
-  ButtonGroup, 
-  Text 
+  Card,
+  CardGrid,
+  Button,
+  ButtonGroup,
+  Text
 } from '@/components/ui';
 import { ThemeToggleButton } from '@/components/ThemeSwitcher';
 
@@ -18,20 +18,17 @@ export default function Home() {
   return (
     <PageContainer>
       <ContentWrapper>
-        <Header 
+        <Header
           title={<>CLAUDIO_YÁÑEZ<wbr />_MENDOZA</>}
-          subtitle="desarrollador full-stack / magíster en ciencias de la ingeniería, mención eléctrica"
+          subtitle="desarrollador full-stack / magíster en ciencias de la ingeniería, mención&nbsp;eléctrica"
           link="/"
         />
 
         <div className="section-content" style={{ textAlign: 'right', padding: '1rem' }}>
           <ThemeToggleButton />
         </div>
-        
+
         <main className='section-content'>
-          <Quote author="Tim Urban">
-            A remarkable, glorious achievement is just what a long series of unremarkable, unglorious tasks looks like from far away.
-          </Quote>
           <Section title="ACERCA DE MÍ">
             <Text size="large">
               Sólo a través de la verdadera <b>COMPRENSIÓN</b> de los
@@ -39,8 +36,11 @@ export default function Home() {
               la realidad.<br /><br />
               Esa es mi filosofía de trabajo.
             </Text>
+            <Quote author="Tim Urban">
+              A remarkable, glorious achievement is just what a long series of unremarkable, unglorious tasks looks like from far away.
+            </Quote>
           </Section>
-          
+
           <Section title="EXPERIENCIA LABORAL">
             <CardGrid>
               <Card>
@@ -53,7 +53,7 @@ export default function Home() {
               </Card>
             </CardGrid>
           </Section>
-          
+
           <Section title="PUBLICACIONES">
             <CardGrid>
               <Card>
@@ -68,20 +68,20 @@ export default function Home() {
               </Card>
             </CardGrid>
           </Section>
-          
+
           <Section title="CONTACTO">
             <ButtonGroup>
               {/* <Button href="mailto:hello@example.com">
                 Email
               </Button> */}
-              <Button 
+              <Button
                 href="https://github.com/Nosferath"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 GitHub
               </Button>
-              <Button 
+              <Button
                 href="https://www.linkedin.com/in/claudio-alejandro-y%C3%A1%C3%B1ez-mendoza-0855a814b/"
                 target="_blank"
                 rel="noopener noreferrer"
