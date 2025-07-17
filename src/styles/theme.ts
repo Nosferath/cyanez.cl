@@ -92,8 +92,8 @@ export const darkTheme: Theme = {
     primary: '#ffffff',
     bgMain: '#0a0a0a',
     bgCard: '#1a1a1a',
-    bgAccent: '#2a2a2a',
-    bgHover: '#3a3a3a',
+    bgAccent: '#3a3a3a',
+    bgHover: '#4a4a4a',
   },
   borders: {
     ...defaultTheme.borders,

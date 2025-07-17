@@ -95,7 +95,7 @@ export default function Home() {
         <Footer>
           <Text>© 2025 Claudio Yáñez -- Construido con React y Tailwind</Text>
         </Footer>
-      </ContentWrapper>
-    </PageContainer>
+      </ContentWrapper >
+    </PageContainer >
   );
 }
