@@ -33,6 +33,7 @@ export interface Theme {
   };
 }
 
+// Variantes de colores tomadas de palettolithic.com
 const amber = {
   50: '#fffbeb',
   100: '#fef3c7',
@@ -50,12 +51,9 @@ const amber = {
 export const defaultTheme: Theme = {
   colors: {
     primary: '#000000',
-    bgMain: '#fffbeb', // amber-50
-    // bgCard: '#ffffff',
+    bgMain: amber[50],
     bgCard: amber[100],
-    // bgAccent: '#fef3c7', // amber-100
     bgAccent: amber[300],
-    // bgHover: '#fef3c7',
     bgHover: amber[400],
   },
   borders: {
@@ -85,7 +83,6 @@ export const defaultTheme: Theme = {
   },
 };
 
-// Alternative themes
 export const darkTheme: Theme = {
   ...defaultTheme,
   colors: {
@@ -122,25 +119,14 @@ const blue = {
 export const blueTheme: Theme = {
   ...defaultTheme,
   colors: {
-    // primary: '#1e40af', // blue-800
     primary: '#000000',
-    bgMain: '#eff6ff', // blue-50
-    // bgCard: '#ffffff',
+    bgMain: blue[50],
     bgCard: blue[100],
-    // bgAccent: '#dbeafe', // blue-100
     bgAccent: blue[300],
-    // bgHover: '#bfdbfe', // blue-200
     bgHover: blue[400],
   },
   borders: {
     ...defaultTheme.borders,
-    // color: '#1e40af',
-  },
-  shadows: {
-    // brutalist: '8px 8px 0 0 rgba(30, 64, 175, 1)',
-    // small: '4px 4px 0 0 rgba(30, 64, 175, 1)',
-    brutalist: '8px 8px 0 0 rgba(0, 0, 0, 1)',
-    small: '4px 4px 0 0 rgba(0, 0, 0, 1)',
   },
 };
 
@@ -161,25 +147,14 @@ const green = {
 export const greenTheme: Theme = {
   ...defaultTheme,
   colors: {
-    // primary: '#166534', // green-800
     primary: '#000000',
-    bgMain: '#f0fdf4', // green-50
-    // bgCard: '#ffffff',
+    bgMain: green[50],
     bgCard: green[100],
-    // bgAccent: '#dcfce7', // green-100
     bgAccent: green[300],
-    // bgHover: '#bbf7d0', // green-200
     bgHover: green[400],
   },
   borders: {
     ...defaultTheme.borders,
-    // color: '#166534',
-  },
-  shadows: {
-    // brutalist: '8px 8px 0 0 rgba(22, 101, 52, 1)',
-    // small: '4px 4px 0 0 rgba(22, 101, 52, 1)',
-    brutalist: '8px 8px 0 0 rgba(0, 0, 0, 1)',
-    small: '4px 4px 0 0 rgba(0, 0, 0, 1)',
   },
 };
 
@@ -200,25 +175,14 @@ const red = {
 export const redTheme: Theme = {
   ...defaultTheme,
   colors: {
-    // primary: '#991b1b', // red-800
     primary: '#000000',
-    bgMain: '#fef2f2', // red-50
-    // bgCard: '#ffffff',
+    bgMain: red[50],
     bgCard: red[100],
-    // bgAccent: '#fecaca', // red-100
     bgAccent: red[300],
-    // bgHover: '#fca5a5', // red-200
     bgHover: red[400],
   },
   borders: {
     ...defaultTheme.borders,
-    // color: '#991b1b',
-  },
-  shadows: {
-    // brutalist: '8px 8px 0 0 rgba(153, 27, 27, 1)',
-    // small: '4px 4px 0 0 rgba(153, 27, 27, 1)',
-    brutalist: '8px 8px 0 0 rgba(0, 0, 0, 1)',
-    small: '4px 4px 0 0 rgba(0, 0, 0, 1)',
   },
 };
 
