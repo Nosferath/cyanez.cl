@@ -17,7 +17,7 @@ export default async function RootLayout({
 }>) {
   const cookieStore = await cookies();
   const themeCookie = cookieStore.get('theme');
-  const initialTheme = (themeCookie?.value as ThemeName) || 'white';
+  const initialTheme = (themeCookie?.value as ThemeName) || 'blue';
 
   const themeCSS = generateThemeCSS(themes[initialTheme]);
 

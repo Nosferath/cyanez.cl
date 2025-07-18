@@ -6,20 +6,20 @@
   --color-bg-card: #ffffff;
   --color-bg-accent: #fef3c7; /* amber-100 */
   --color-bg-hover: #fbbf24;
-  
+
   --border-width: 4px;
   --border-width-thin: 2px;
   --border-color: #000000;
-  
+
   --shadow-brutalist: 8px 8px 0 0 rgba(0, 0, 0, 1);
   --shadow-small: 4px 4px 0 0 rgba(0, 0, 0, 1);
-  
+
   --space-xs: 0.5rem;
   --space-sm: 1rem;
   --space-md: 1.5rem;
   --space-lg: 2rem;
   --space-xl: 3rem;
-  
+
   --font-mono: 'Courier New', monospace;
   --font-size-xl: 2.5rem;
   --font-size-lg: 1.5rem;
@@ -77,13 +77,16 @@ body {
   text-decoration: none;
   font-family: var(--font-mono);
   font-weight: normal;
-  transition: background-color 0.2s ease;
+  transition: all 0.15s ease;
   cursor: pointer;
   border-radius: var(--space-xs);
+  box-shadow: var(--shadow-small);
 }
 
 .btn:hover {
   background-color: var(--color-bg-hover);
+  box-shadow: none;
+  transform: translate(4px, 4px);
 }
 
 .btn-group {
@@ -165,19 +168,19 @@ body {
   .page-container {
     padding: var(--space-sm);
   }
-  
+
   .content-wrapper {
     border-width: var(--border-width-thin);
   }
-  
+
   .heading-primary {
     font-size: var(--font-size-lg);
   }
-  
+
   .btn-group {
     flex-direction: column;
   }
-  
+
   .btn {
     text-align: center;
   }
