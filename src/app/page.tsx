@@ -71,9 +71,9 @@ export default function Home() {
 
           <Section title="CONTACTO">
             <ButtonGroup>
-              {/* <Button href="mailto:hello@example.com">
+              <Button href="mailto:hola@cyanez.cl">
                 Email
-              </Button> */}
+              </Button>
               <Button
                 href="https://github.com/Nosferath"
                 target="_blank"
