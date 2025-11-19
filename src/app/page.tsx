@@ -71,6 +71,13 @@ export default function Home() {
 
           <Section title="CONTACTO">
             <ButtonGroup>
+              <Button
+                href="https://blog.cyanez.cl"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Blog
+              </Button>
               <Button href="mailto:hola@cyanez.cl">
                 Email
               </Button>
