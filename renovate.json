@@ -6,6 +6,22 @@
     {
       "matchUpdateTypes": ["minor", "patch"],
       "groupName": "minor and patch updates"
+    },
+    {
+      "matchUpdateTypes": ["digest", "patch"],
+      "addLabels": ["safe-update"]
+    },
+    {
+      "matchUpdateTypes": ["minor"],
+      "addLabels": ["minor"]
+    },
+    {
+      "matchUpdateTypes": ["major"],
+      "addLabels": ["major"],
+      "prTitle": "⚠️ MAJOR: update {{{depName}}} from {{{currentVersion}}} to {{{newVersion}}}",
+      "prBodyNotes": [
+        "**⚠️ This is a MAJOR version update.** Review changelog for breaking changes, required migrations, or data incompatibilities before merging."
+      ]
     }
   ]
 }
